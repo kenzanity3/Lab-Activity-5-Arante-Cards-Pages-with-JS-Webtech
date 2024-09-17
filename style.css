@@ -1,5 +1,5 @@
 *{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: sans-serif;
     box-sizing: border-box;
     color: black;
 }
@@ -30,6 +30,7 @@ body{
     width: 170px; 
     border-radius: 8px;
     background-color:  white;
+    align-items: center;
 }
 
 .card ul{
@@ -57,152 +58,270 @@ span{
     font-weight: 500;
     font-size: 13px;
     margin: auto 2px;
-    padding: 2px 5px;
+    padding: 2px 5px 2px;
     border-radius: 5px;
     box-shadow: 0 1px 3px -1px #000000d7;
     color: white;
 }
 
-.Electric {
-    background-color: #c90;
-  }
-  .card:hover:has(.Electric) img {
-    filter: drop-shadow(0 1px 15px #c90);
-  }
-  
-  .Psychic {
-    background-color: #ff227a;
-  }
-  
-  .card:hover:has(.Psychic) img {
-    filter: drop-shadow(1px 1px 15px #ff227a);
-  }
-  
-  .Grass {
-    background-color: green;
-  }
-  
-  .card:hover:has(.Grass) img {
-    filter: drop-shadow(0 1px 15px green);
-  }
-  
-  .Poison {
-    background-color: purple;
-  }
-  
-  .card:hover:has(.Poison) img {
-    filter: drop-shadow(0 1px 15px purple);
-  }
-  
-  .Fire {
-    background-color: rgba(255, 68, 0, 0.81);
-  }
-  
-  .card:hover:has(.Fire) img {
-    filter: drop-shadow(0 1px 15px rgba(255, 68, 0, 0.81));
-  }
-  
-  .Water {
-    background-color: blue;
-  }
-  
-  .card:hover:has(.Water) img {
-    filter: drop-shadow(0 1px 15px blue);
-  }
-  
-  .Flying {
-    background-color: darkblue;
-  }
-  
-  .card:hover:has(.Flying) img {
-    filter: drop-shadow(0 1px 15px darkblue);
-  }
-  
-  .Bug {
-    background-color: darkgreen;
-  }
-  
-  .card:hover:has(.Bug) img {
-    filter: drop-shadow(0 1px 15px darkgreen);
-  }
-  
-  .Normal {
-    background-color: grey;
-  }
-  
-  .card:hover:has(.Normal) img {
-    filter: drop-shadow(0 1px 15px grey);
-  }
-  
-  .Ground {
-    background-color: #bf9926;
-  }
-  
-  .card:hover:has(.Ground) img {
-    filter: drop-shadow(0 1px 15px #bf9926);
-  }
-  
-  .Fairy {
-    background-color: #e76de7;
-  }
-  
-  .card:hover:has(.Fairy) img {
-    filter: drop-shadow(0 1px 15px #e76de7);
-  }
-  
-  .Fighting {
-    background-color: darkred;
-  }
-  
-  .card:hover:has(.Fighting) img {
-    filter: drop-shadow(0 1px 15px darkred);
-  }
-  
-  .Rock {
-    background-color: #a59249;
-  }
-  
-  .card:hover:has(.Rock) img {
-    filter: drop-shadow(0 1px 15px #a59249);
-  }
-  
-  .Steel {
-    background-color: #8e8ea4;
-  }
-  
-  .card:hover:has(.Steel) img {
-    filter: drop-shadow(0 1px 15px #8e8ea4);
-  }
-  
-  .Dark {
-    background-color: #573e31;
-  }
-  
-  .card:hover:has(.Dark) img {
-    filter: drop-shadow(0 1px 15px #573e31);
-  }
-  
-  .Ice {
-    background-color: #0af;
-  }
-  
-  .card:hover:has(.Ice) img {
-    filter: drop-shadow(0 1px 15px #0af);
-  }
-  
-  .Ghost {
-    background-color: #5454b3;
-  }
-  
-  .card:hover:has(.Ghost) img {
-    filter: drop-shadow(0 1px 15px #5454b3);
-  }
-  
-  .Dragon {
-    background-color: #4e38e9;
-  }
-  
-  .card:hover:has(.Dragon) img {
-    filter: drop-shadow(0 1px 15px #4e38e9);
-  }
 
+
+  /*Pokemon Page*/
+
+  .pokemonpage{
+    width: 800px;
+    height: auto;
+  margin: 50px auto;
+  background-color: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 2px 5px #00000065;
+  text-align: center;
+}
+
+.pokemonpagecontent{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0%;
+}
+
+.pokemonpagecontent table{
+    border-collapse: collapse;
+}
+.pokemonpagecontent table tr td{
+    border-bottom: 1px solid #0000002d;
+    border-right: 1px solid #0000002d;
+    padding: 6px 2px;
+}
+.pokemonpageimage{
+  width: 100%;
+  border-bottom: black solid;
+}
+.pokemonpageimage img{
+    width: 200px;
+    margin: 5px auto;  
+}
+
+.pokemonpagedetails{
+    padding: 10px 15px;
+}
+
+.name,.abilitiesname{
+  font-weight: bold;
+  width: 100px;
+}
+.detailsdata{
+  width: 240px ;
+  text-align: left;
+  padding-left: 10px;
+}
+.pokemonpagedetails span{
+  padding: 3px;
+  margin: 4px 4px;
+  font-size: 12px;
+  
+}
+.pokemonpagedescription{
+    font-size: 15px;
+    text-align: left;
+}
+
+.pokemonpagestats{
+    padding: 10px 25px;   
+}
+.pokemonpagestats table .bar div {
+  height: 20px;
+  background-color: #0dc80d;
+}
+.pokemonpagestats table .bar{
+  width: 200px;
+}
+.backbutton{
+  height: 40px;
+  width: 100px;
+  border-radius: 15px;
+  font-weight: 1000;
+}
+
+.leftbutton,.rightbutton{
+  height: 40px;
+  width: 100px;
+  border-radius: 15px;
+  font-weight: 1000;
+  
+}
+.leftbutton{
+  transform: translate(50px,50px);
+}
+.rightbutton
+{transform: translate(545px,30.5px);
+
+}
+
+
+
+.pokemonpagemaincontainer h1{
+  border-radius: 15px;
+  margin: 0px 0px 20px 0px;
+  text-align: center;
+  height: 80px;
+}
+
+.abilitiesname{
+  width: 60px;
+  grid-template-columns: 2fr 2fr;
+}
+
+/*effect*/
+
+.Electric {
+  background-color: #c90;
+}
+.card:hover:has(.Electric) img {
+  filter: drop-shadow(0 1px 15px #c90);
+}
+
+
+.Psychic {
+  background-color: #ff227a;
+}
+
+.card:hover:has(.Psychic) img {
+  filter: drop-shadow(1px 1px 15px #ff227a);
+}
+
+.Grass {
+  background-color: green;
+}
+
+.card:hover:has(.Grass) img {
+  filter: drop-shadow(0 1px 15px green);
+}
+
+
+.Poison {
+  background-color: purple;
+}
+
+.card:hover:has(.Poison) img {
+  filter: drop-shadow(0 1px 15px purple);
+}
+
+
+
+.Fire {
+  background-color: rgba(255, 68, 0, 0.81);
+}
+
+.card:hover:has(.Fire) img {
+  filter: drop-shadow(0 1px 15px rgba(255, 68, 0, 0.81));
+}
+
+
+.Water {
+  background-color: blue;
+}
+
+.card:hover:has(.Water) img {
+  filter: drop-shadow(0 1px 15px blue);
+}
+
+
+.Flying {
+  background-color: darkblue;
+}
+
+.card:hover:has(.Flying) img {
+  filter: drop-shadow(0 1px 15px darkblue);
+}
+
+.Bug {
+  background-color: darkgreen;
+}
+
+.card:hover:has(.Bug) img {
+  filter: drop-shadow(0 1px 15px darkgreen);
+}
+
+
+.Normal {
+  background-color: grey;
+}
+
+.card:hover:has(.Normal) img {
+  filter: drop-shadow(0 1px 15px grey);
+}
+
+
+.Ground {
+  background-color: #bf9926;
+}
+
+.card:hover:has(.Ground) img {
+  filter: drop-shadow(0 1px 15px #bf9926);
+}
+
+
+.Fairy {
+  background-color: #e76de7;
+}
+
+.card:hover:has(.Fairy) img {
+  filter: drop-shadow(0 1px 15px #e76de7);
+}
+
+.Fighting {
+  background-color: darkred;
+}
+
+.card:hover:has(.Fighting) img {
+  filter: drop-shadow(0 1px 15px darkred);
+}
+
+.Rock {
+  background-color: #a59249;
+}
+
+.card:hover:has(.Rock) img {
+  filter: drop-shadow(0 1px 15px #a59249);
+}
+
+.Steel {
+  background-color: #8e8ea4;
+}
+
+.card:hover:has(.Steel) img {
+  filter: drop-shadow(0 1px 15px #8e8ea4);
+}
+
+.Dark {
+  background-color: #573e31;
+}
+
+.card:hover:has(.Dark) img {
+  filter: drop-shadow(0 1px 15px #573e31);
+}
+
+.Ice {
+  background-color: #0af;
+}
+
+.card:hover:has(.Ice) img {
+  filter: drop-shadow(0 1px 15px #0af);
+}
+
+.Ghost {
+  background-color: #5454b3;
+}
+
+.card:hover:has(.Ghost) img {
+  filter: drop-shadow(0 1px 15px #5454b3);
+}
+
+.Dragon {
+  background-color: #4e38e9;
+}
+
+.card:hover:has(.Dragon) {
+  filter: drop-shadow(0 1px 15px #4e38e9);
+}
