@@ -72,7 +72,7 @@ span{
     grid-column: 2;
     flex: 1;
     width: 800px;
-    height: 665px;
+    height: auto;
     margin: auto auto 25px auto;
   background-color: white;
   padding: 25px;
@@ -86,9 +86,11 @@ span{
   width: 100px;
   border-radius: 15px;
   font-weight: 1000;
-  position: absolute;
-  top: 5%; 
-  
+    position: absolute;
+    top: 5%;
+    left: 0; 
+    transform: translateY(-50%);
+
   margin: 0 20px; 
 }
 .leftbutton{
@@ -130,6 +132,7 @@ transform: translateX(190px);
 
 .pokemonpagedetails{
     padding: 10px 15px;
+    height: 300px;
 }
 
 .name,.abilitiesname{
@@ -150,7 +153,6 @@ transform: translateX(190px);
 .pokemonpagedescription{
     font-size: 15px;
     text-align: left;
-    height: 300px;
 }
 
 .pokemonpagestats{
