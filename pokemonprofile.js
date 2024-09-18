@@ -40,8 +40,7 @@ function PokemonProfile(pokedex){
                 <p>${pokedex.description}</p>
                 </div>
             
-                
-                <div class="pokemonpagestats">
+                ${pokedex.base.length == 0 ? `<div class="pokemonpagestats">
                 <h3>Base stats</h3>
                 <table>
             
@@ -84,7 +83,8 @@ function PokemonProfile(pokedex){
                 </tbody>
             
                 </table>
-                </div>
+                </div>` : ''}
+                
             </div>
             </div> `;
 
