@@ -1,10 +1,11 @@
 function PokemonProfile(pokedex){
     const zeroPad = (num, places) => String(num).padStart(places, '0')
-    
-
     const abilityClasses = pokedex.profile.ability.map(skill => `${skill[0]}`);
-    
     const typeClasses = pokedex.type.map(type => `${type}`);
+    const hasbasestats = pokedex.base;
+
+
+
     const Profile = `<h1 class = "${pokedex.type.length > 1 ? `${pokedex.type[1]}`: `${pokedex.type[0]}`}"> ${pokedex.name.english}</h1>
     <div class="pokemonpagecontent">
     <div class="pokemonpageimage">
@@ -40,53 +41,53 @@ function PokemonProfile(pokedex){
                 <p>${pokedex.description}</p>
                 </div>
             
-               <div class="pokemonpagestats">
+                <div class="pokemonpagestats">
                 <h3>Base stats</h3>
                 <table>
             
                 <tbody>
                 <tr>
                 <td class = "name">HP</td>
-                <td class = "hpvalue"><div>${pokedex.base.HP}</div></td>
-                <td class ="bar"><div style = "width: ${pokedex.base.HP}px"></div></td>
+                <td class = "hpvalue"><div>${hasbasestats?.HP || 0}</div></td>
+                <td class ="bar"><div style = "width: ${hasbasestats?.HP || 1}px"></div></td>
                 </tr>
                 <tr>
                 <td class = "name">Attack</td>
-                <td class = "atkvalue"><div>${pokedex.base.Attack}</div></td>
-                <td class ="bar"><div style = "width: ${pokedex.base.Attack}px"></div></td>
+                <td class = "atkvalue"><div>${hasbasestats?.Attack || 0}</div></td>
+                <td class ="bar"><div style = "width: ${hasbasestats?.Attack || 1}px"></div></td>
                 </tr>
                 <tr>
                 <td class = "name">Defense</td>
-                <td class = "Dfvalue"><div>${pokedex.base.Defense}</div></td>
-                <td class ="bar"><div style = "width: ${pokedex.base.Defense}px"></div></td>    
+                <td class = "Dfvalue"><div>${hasbasestats?.Defense|| 0}</div></td>
+                <td class ="bar"><div style = "width: ${hasbasestats?.Defense || 1}px"></div></td>    
                 </tr>
                 <tr>
                 <td class = "name">Sp. Attack</td>
-                <td class = "SpAtkvalue"><div>${pokedex.base["Sp. Attack"]}</div></td>
-                <td class ="bar"><div style = "width: ${pokedex.base["Sp. Attack"]}px"></div></td>
+                <td class = "SpAtkvalue"><div>${hasbasestats?.["Sp. Attack"] || 0}</div></td>
+                <td class ="bar"><div style = "width: ${hasbasestats?.["Sp. Attack"] || 1}px"></div></td>
                 </tr> 
                 <tr>
                 <td class = "name">Sp. Defense</td>
-                <td class = "SpDefvalue"><div>${pokedex.base["Sp. Defense"]}</div></td>
-                <td class ="bar"><div style = "width: ${pokedex.base["Sp. Defense"]}px"></div></td>
+                <td class = "SpDefvalue"><div>${hasbasestats?.["Sp. Defense"] || 0}</div></td>
+                <td class ="bar"><div style = "width: ${hasbasestats?.["Sp. Defense"] || 1}px"></div></td>
                 </tr>
                 <tr>
                 <td class = "name">Speed</td>
-                <td class ="Spdvalue"><div>,${pokedex.base.Speed}</div></td>
-                <td class ="bar"><div style = "width: ${pokedex.base.Speed}px"></div></td>
+                <td class ="Spdvalue"><div>,${hasbasestats?.Speed || 0}</div></td>
+                <td class ="bar"><div style = "width: ${hasbasestats?.Speed || 1}px"></div></td>
                 </tr>
                 <tr>
                     <td class = "name">Total</td>
-                    <td class = "Total"><div><b>${pokedex.base.Attack+pokedex.base.Defense+pokedex.base["Sp. Attack"]+pokedex.base["Sp. Defense"]+pokedex.base.Speed}</b></div></td>
+                    <td class = "Total"><div><b>${hasbasestats?.Attack+hasbasestats?.Defense+hasbasestats?.["Sp. Attack"] ?? 0 +hasbasestats?.["Sp. Defense"] ?? 0 + hasbasestats?.Speed}</b></div></td>
                     <td class ="bar"></td>
                     </tr>
                 </tbody>
             
                 </table>
                 </div>
-                
             </div>
-            </div> `;
+            </div>
+                 `;
 
     return Profile;
 }
