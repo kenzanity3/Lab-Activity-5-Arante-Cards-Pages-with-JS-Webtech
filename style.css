@@ -150,6 +150,7 @@ transform: translateX(190px);
 .pokemonpagedescription{
     font-size: 15px;
     text-align: left;
+    height: 300px;
 }
 
 .pokemonpagestats{
