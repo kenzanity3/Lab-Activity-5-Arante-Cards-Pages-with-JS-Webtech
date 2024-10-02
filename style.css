@@ -68,6 +68,9 @@ span{
 
   /*Pokemon Page*/
 
+.pokemonpagemaincontainer h1{
+    color: white;
+}
   .pokemonpagemaincontainer{
     grid-column: 2;
     flex: 1;
