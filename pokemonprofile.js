@@ -122,9 +122,6 @@ function showPokemonProfile() {
 
   fetch("pokedex.json")
   .then(response => response.json())
-  .catch(error => {
-    console.error('Error fetching data:', error);
-  })
     .then(data => {
       const pokemon = data.find(p => p.id === pokemonId);
       if (pokemon) {
